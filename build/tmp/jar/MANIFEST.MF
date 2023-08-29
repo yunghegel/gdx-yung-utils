@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Built-By: jamie
+Built-JDK: 19.0.2
+Built-OS: Linux
+
