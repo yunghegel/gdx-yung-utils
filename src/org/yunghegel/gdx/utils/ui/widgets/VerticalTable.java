@@ -14,6 +14,8 @@ public class VerticalTable extends VisTable {
         super();
         verticalGroup = new VerticalGroup();
         add(verticalGroup).grow().fill().row();
+        verticalGroup.wrap();
+        verticalGroup.columnAlign(Align.left);
 
         addSeparator().space(5);
         align(Align.topLeft);
@@ -22,18 +24,21 @@ public class VerticalTable extends VisTable {
     }
 
     public void addRow(VisTable table) {
-        verticalGroup.addActor(table);
+
+
+        table.align(Align.left);
+        add(table).grow().fill().row();
     }
 
     public void addRow(VisTable table, float pad) {
-        verticalGroup.addActor(table);
-        verticalGroup.space(pad);
+        table.align(Align.left);
+        add(table).grow().fill().spaceBottom(5).spaceTop(5).row();
     }
 
     public void setActors(VisTable ... tables) {
         verticalGroup.clear();
         for (VisTable table : tables) {
-            verticalGroup.addActor(table);
+            addRow(table);
         }
     }
 

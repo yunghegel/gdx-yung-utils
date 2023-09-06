@@ -82,7 +82,7 @@ public class SceneManagerPlus extends SceneManager {
 
     public void renderSkybox(){
         getBatch().begin(camera);
-        getBatch().render(getSkyBox());
+        if(getSkyBox() != null) getBatch().render(getSkyBox());
         getBatch().end();
     }
 

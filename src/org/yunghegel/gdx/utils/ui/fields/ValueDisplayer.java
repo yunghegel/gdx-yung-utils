@@ -1,7 +1,9 @@
 package org.yunghegel.gdx.utils.ui.fields;
 
 import com.badlogic.gdx.scenes.scene2d.ui.Cell;
+import com.badlogic.gdx.scenes.scene2d.ui.HorizontalGroup;
 import com.badlogic.gdx.utils.Align;
+import com.kotcrab.vis.ui.VisUI;
 import com.kotcrab.vis.ui.widget.VisLabel;
 import com.kotcrab.vis.ui.widget.VisTable;
 import com.kotcrab.vis.ui.widget.VisTextField;
@@ -10,7 +12,7 @@ import org.yunghegel.gdx.utils.ui.fields.values.ValueField;
 import java.util.function.Supplier;
 
 public abstract class ValueDisplayer<T> extends VisTable implements ValueField<T> {
-
+    public HorizontalGroup group = new HorizontalGroup();
     public T value;
     protected Supplier<T> valueSupplier;
     public VisTextField valueLabel;
@@ -22,6 +24,8 @@ public abstract class ValueDisplayer<T> extends VisTable implements ValueField<T
         valueLabel.setReadOnly(true);
 
         buildWidget();
+        setSkin(VisUI.getSkin());
+        setBackground("tint-border");
     }
 
     public ValueDisplayer(T value, Supplier<T> valueSupplier) {

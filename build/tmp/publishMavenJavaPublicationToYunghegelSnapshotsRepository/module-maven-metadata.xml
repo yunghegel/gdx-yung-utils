@@ -5,9 +5,8 @@
   <versioning>
     <latest>0.1-SNAPSHOT</latest>
     <versions>
-      <version>1.1-SNAPSHOT</version>
       <version>0.1-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20230829111623</lastUpdated>
+    <lastUpdated>20230906010900</lastUpdated>
   </versioning>
 </metadata>

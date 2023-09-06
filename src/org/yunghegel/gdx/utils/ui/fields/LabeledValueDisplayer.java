@@ -27,9 +27,9 @@ public abstract class LabeledValueDisplayer<T> extends ValueDisplayer<T> impleme
     }
 
     public void buildWidget(){
-        add(nameLabel).pad(5).width(60).expandX().left();
-        addSeparator(true);
-        add(valueLabel).pad(5).width(50).padLeft(6).expandX().left();
+        add(nameLabel).pad(5).left().spaceRight(2);
+
+        add(valueLabel).pad(5).left().maxWidth(40);
 //        add(group).pad(5).width(30);
 //        group.space(10);
     }

@@ -23,6 +23,7 @@ public class ViewportWidget extends Widget {
 
     public ViewportWidget(Viewport viewport) {
         this.viewport = viewport;
+
     }
 
     public ViewportWidget(Viewport viewport, Renderer renderer, Stage stage) {

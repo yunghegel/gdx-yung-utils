@@ -24,6 +24,7 @@ public class HorizontalTable extends VisTable {
     public void setActors(Actor ... actors) {
         group.clear();
         for (Actor actor : actors) {
+
             group.addActor(actor);
         }
 

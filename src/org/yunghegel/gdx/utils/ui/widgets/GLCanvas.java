@@ -46,6 +46,8 @@ public class GLCanvas extends Widget {
 
     private boolean requestRender = false;
 
+    private boolean renderSimple = true;
+
     private boolean initialFrame = false;
     private Stage afterRenderStage;
     private VisTable root;
@@ -113,6 +115,11 @@ public class GLCanvas extends Widget {
 
     public void render(float delta,RenderViewport render){
 
+        if(renderSimple){
+            renderSimple(delta,render);
+            return;
+        }
+
 
 
         if(requestRender||!initialFrame){
@@ -146,6 +153,13 @@ public class GLCanvas extends Widget {
             spriteBatch.draw(getFboTexture(), 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
             spriteBatch.end();
         }
+    }
+
+    public void renderSimple(float delta,RenderViewport render){
+        viewport.apply();
+        render.render(camera);
+        compassGizmo.update();
+        compassGizmo.render(batch);
     }
 
     @FunctionalInterface
