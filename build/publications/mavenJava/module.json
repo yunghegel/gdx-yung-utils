@@ -88,11 +88,11 @@
         {
           "name": "gdx-yung-utils-0.1-SNAPSHOT.jar",
           "url": "gdx-yung-utils-0.1-SNAPSHOT.jar",
-          "size": 1872099,
-          "sha512": "7e9478c5f0cb0757e2254e27550784dbfa219ebe75dcd1d40b582cfd6220bf9b2df02e727b25bc15ab0ba0ac6f56e21d7768109bb60489babd0caed38eed799d",
-          "sha256": "b61336b4bc14cf6cfc8df100f7b008dca67c6831e8ba332064bce40ce9c6c5e1",
-          "sha1": "137178bf7ea4ef645f6d387c18bb32be65e44e51",
-          "md5": "bfb6ec1220ef8b9718ed420e5042406a"
+          "size": 1872276,
+          "sha512": "9d10cfe859802691108dbdcdfaae883eb85eb7e91d353132b531db6115c815bbca8ba36388ba2d492172512524eea8874d321137fc088e072b91e72bac7c379e",
+          "sha256": "e1ae49d71c1de944322134532724fd72adc5acfe61f0b70c7eca4e39f223d485",
+          "sha1": "abe1afc6157646a9e108577ce830bc10832cda6c",
+          "md5": "a3edb6b61a059b4afdc8b5725a9a93aa"
         }
       ]
     },
@@ -269,11 +269,11 @@
         {
           "name": "gdx-yung-utils-0.1-SNAPSHOT.jar",
           "url": "gdx-yung-utils-0.1-SNAPSHOT.jar",
-          "size": 1872099,
-          "sha512": "7e9478c5f0cb0757e2254e27550784dbfa219ebe75dcd1d40b582cfd6220bf9b2df02e727b25bc15ab0ba0ac6f56e21d7768109bb60489babd0caed38eed799d",
-          "sha256": "b61336b4bc14cf6cfc8df100f7b008dca67c6831e8ba332064bce40ce9c6c5e1",
-          "sha1": "137178bf7ea4ef645f6d387c18bb32be65e44e51",
-          "md5": "bfb6ec1220ef8b9718ed420e5042406a"
+          "size": 1872276,
+          "sha512": "9d10cfe859802691108dbdcdfaae883eb85eb7e91d353132b531db6115c815bbca8ba36388ba2d492172512524eea8874d321137fc088e072b91e72bac7c379e",
+          "sha256": "e1ae49d71c1de944322134532724fd72adc5acfe61f0b70c7eca4e39f223d485",
+          "sha1": "abe1afc6157646a9e108577ce830bc10832cda6c",
+          "md5": "a3edb6b61a059b4afdc8b5725a9a93aa"
         }
       ]
     },
@@ -289,11 +289,11 @@
         {
           "name": "gdx-yung-utils-0.1-SNAPSHOT-sources.jar",
           "url": "gdx-yung-utils-0.1-SNAPSHOT-sources.jar",
-          "size": 1720427,
-          "sha512": "825ac9df0dbf554799ce1c215e79d40bf94393e4c76ef9ca95d519f93302470fa0df65c0b49f63336a6fe35aca767c8f7705acf76981c0bc9687f0c12251fcc7",
-          "sha256": "705742e447d379cef53627e4bf519e3cabec066224085d05372f7b83a5063e3e",
-          "sha1": "34a638d8f2b69b106f1af043a1dceafef318a523",
-          "md5": "546580b37be40dd01fc013a2acc2c241"
+          "size": 1720284,
+          "sha512": "2d3de41891c574861ebfce8f281f577e2b26604dbfd7eac8cd27e92d6d576f442c5f4aebb65b6df4a56357b672a4980ef43d0309f4220787383ff29f1b3ae6bb",
+          "sha256": "92df109fe39a79fe882e17bdad244d16e2a805a02ccf8a46e384c38fc044f833",
+          "sha1": "878e885cc529c159cd549135e08b98325efb62a3",
+          "md5": "7c2270b8e8a5c9bb83ab49cd3145d6db"
         }
       ]
     }
