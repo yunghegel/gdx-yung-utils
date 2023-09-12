@@ -65,7 +65,7 @@ public class ProfilerWidget extends TabPane {
 //        createGLMemoryFields();
 //        createGLProfilerFields();
 
-        addPane("Console",new LoggerWidget());
+        addPane("Console",new LoggerWidget(skin));
 
 
 

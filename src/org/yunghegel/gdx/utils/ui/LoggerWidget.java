@@ -51,9 +51,9 @@ public class LoggerWidget extends VisTable {
         return LogLevel.DEFAULT;
     }
 
-    public LoggerWidget() {
-        console = new GUIConsole(new Skin(Gdx.files.internal("skin_bitmap/uiskin.json")),false, Input.Keys.APOSTROPHE, VisWindow.class,VisTable.class,"window-bg", TextField.class, TextButton.class, Label.class, VisScrollPane.class);
-        add(console).expandX().fillX().height(200);
+    public LoggerWidget(Skin skin) {
+        console = new GUIConsole(skin,false, Input.Keys.APOSTROPHE, VisWindow.class,VisTable.class,"window-bg", TextField.class, TextButton.class, Label.class, VisScrollPane.class);
+        add(console).expand().fill();
         commandExecutor = new CommandExecutor();
         console.setCommandExecutor(commandExecutor);
 

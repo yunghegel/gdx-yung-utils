@@ -70,6 +70,10 @@ public class CameraController extends InputAdapter {
         translateButton = 1;
     }
 
+    public void enableRotation(){
+        rotateButton = 0;
+    }
+
     @Override
     public boolean keyDown(int keycode) {
         keys.put(keycode, keycode);

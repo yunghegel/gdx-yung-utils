@@ -538,7 +538,7 @@ public class GUIConsole extends AbstractConsole {
 
                 l.setColor(le.getColor());
                 if(le.getLevel() != LogLevel.DEFAULT) {
-                    l.setStyle(skin.get("console",Label.LabelStyle.class));
+                    l.setStyle(skin.get("default",Label.LabelStyle.class));
                 }
                 logEntries.add(l).expandX().fillX().top().left().row();
             }
