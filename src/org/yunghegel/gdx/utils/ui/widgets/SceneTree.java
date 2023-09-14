@@ -7,8 +7,8 @@ import com.kotcrab.vis.ui.widget.VisImageButton;
 import com.kotcrab.vis.ui.widget.VisLabel;
 import com.kotcrab.vis.ui.widget.VisTable;
 import com.kotcrab.vis.ui.widget.VisTree;
-import org.yunghegel.gdx.scenegraph.scene3d.graph.GameObject;
-import org.yunghegel.gdx.scenegraph.scene3d.scene.SceneGraph;
+import org.yunghegel.gdx.scenegraph.scene3d.GameObject;
+import org.yunghegel.gdx.scenegraph.scene3d.SceneGraph;
 
 
 public class SceneTree extends VisTable {
