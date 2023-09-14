@@ -1,15 +1,16 @@
 
 group 'org.yunghegel.gdx'
-version '0.1-SNAPSHOT'
+version "$gdxYungUtilsVersion"
 
 dependencies {
-//    implementation project(path: ':gdx-gizmos')
+    implementation project(path: ':gdx-scenegraph')
     implementation 'com.esotericsoftware.minlog:minlog:1.2'
     implementation 'com.esotericsoftware.kryo:kryo:2.24.0'
     implementation 'com.esotericsoftware.minlog:minlog:1.2'
     implementation 'com.strongjoshua:libgdx-inGameConsole:1.0.0'
     // Define dependencies for gdx-yung-utils
     implementation "org.yunghegel.gdx:gdx-gizmos:0.1-SNAPSHOT"
+
 }
 
 publishing {
