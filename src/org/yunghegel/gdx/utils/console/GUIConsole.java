@@ -436,7 +436,7 @@ public class GUIConsole extends AbstractConsole {
             context = new ConsoleContext(tableClass, labelClass, skin, tableBackground);
 
             if (skin.has("small-font-normal", BitmapFont.class)) fontName = "small-font-normal";
-            else fontName = "default-font";
+            else fontName = "default";
 
             TextField.TextFieldStyle tfs = skin.get(TextField.TextFieldStyle.class);
             tfs.font = skin.getFont(fontName);

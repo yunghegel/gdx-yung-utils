@@ -52,7 +52,7 @@ public class LoggerWidget extends VisTable {
     }
 
     public LoggerWidget(Skin skin) {
-        console = new GUIConsole(skin,false, Input.Keys.APOSTROPHE, VisWindow.class,VisTable.class,"window-bg", TextField.class, TextButton.class, Label.class, VisScrollPane.class);
+        console = new GUIConsole(skin,false, Input.Keys.APOSTROPHE, VisWindow.class,VisTable.class,"list-background", TextField.class, TextButton.class, Label.class, VisScrollPane.class);
         add(console).expand().fill();
         commandExecutor = new CommandExecutor();
         console.setCommandExecutor(commandExecutor);

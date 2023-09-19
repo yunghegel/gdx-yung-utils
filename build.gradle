@@ -9,7 +9,7 @@ dependencies {
     implementation 'com.esotericsoftware.minlog:minlog:1.2'
     implementation 'com.strongjoshua:libgdx-inGameConsole:1.0.0'
     // Define dependencies for gdx-yung-utils
-    implementation "org.yunghegel.gdx:gdx-gizmos:0.1-SNAPSHOT"
+    implementation "org.yunghegel.gdx:gdx-gizmos:$gdxGizmosVersion"
 
 }
 
@@ -29,7 +29,7 @@ publishing {
         mavenJava(MavenPublication) {
                 groupId = "org.yunghegel.gdx"
                 artifactId = "gdx-yung-utils"
-                version ="0.1-SNAPSHOT"
+                version =version
                 from components.java
         }
     }

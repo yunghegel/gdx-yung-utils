@@ -41,4 +41,12 @@ public class UIUtil {
         return bounds;
     }
 
+    public static boolean isInsideRectangle(float x, float y, Rectangle rectangle){
+        return x >= rectangle.x && x <= rectangle.x + rectangle.width && y >= rectangle.y && y <= rectangle.y + rectangle.height;
+    }
+
+    public static boolean isInsideRectangle(float x, float y, float width, float height, float originX,float originY){
+        return x >= originX && x <= originX + width && y >= originY && y <= originY + height;
+    }
+
 }
