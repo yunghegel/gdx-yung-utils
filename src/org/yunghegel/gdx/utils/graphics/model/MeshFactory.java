@@ -18,7 +18,7 @@ public class MeshFactory {
         for(int i=0 ; i<size ; i++){
             for(int j=0 ; j<size ; j++){
                 int index = (i * size + j) * floatsPerVertex;
-                vertices[index + 0] = j;
+                vertices[index] = j;
                 vertices[index + 1] = i;
                 vertices[index + 2] = 0;
 
@@ -33,7 +33,7 @@ public class MeshFactory {
         for(int i=0 ; i<size-1 ; i++){
             for(int j=0 ; j<size-1 ; j++){
                 int index = (i * (size-1) + j) * 6;
-                indices[index + 0] = (short)(i * size + j);
+                indices[index] = (short)(i * size + j);
                 indices[index + 1] = (short)(i * size + j + 1);
                 indices[index + 2] = (short)((i+1) * size + j);
 
@@ -64,7 +64,7 @@ public class MeshFactory {
         for(int i=0 ; i<size ; i++){
             for(int j=0 ; j<size ; j++){
                 int index = (i * size + j) * floatsPerVertex;
-                vertices[index + 0] = j;
+                vertices[index] = j;
                 vertices[index + 1] = 0;
                 vertices[index + 2] = i;
 
@@ -79,7 +79,7 @@ public class MeshFactory {
         for(int i=0 ; i<size-1 ; i++){
             for(int j=0 ; j<size-1 ; j++){
                 int index = (i * (size-1) + j) * 6;
-                indices[index + 0] = (short)(i * size + j);
+                indices[index] = (short)(i * size + j);
                 indices[index + 1] = (short)(i * size + j + 1);
                 indices[index + 2] = (short)((i+1) * size + j);
 
@@ -109,7 +109,7 @@ public class MeshFactory {
         for(int i=0 ; i<size ; i++){
             for(int j=0 ; j<size ; j++){
                 int index = (i * size + j) * floatsPerVertex;
-                vertices[index + 0] = 0;
+                vertices[index] = 0;
                 vertices[index + 1] = j;
                 vertices[index + 2] = i;
 
@@ -124,7 +124,7 @@ public class MeshFactory {
         for(int i=0 ; i<size-1 ; i++){
             for(int j=0 ; j<size-1 ; j++){
                 int index = (i * (size-1) + j) * 6;
-                indices[index + 0] = (short)(i * size + j);
+                indices[index] = (short)(i * size + j);
                 indices[index + 1] = (short)(i * size + j + 1);
                 indices[index + 2] = (short)((i+1) * size + j);
 

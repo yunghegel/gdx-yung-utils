@@ -51,7 +51,7 @@ public class Grid {
     }
 
     public void render(Camera cam, Environment env) {
-        translateToBeInView(cam, (int) size, near, far, step);
+        translateToBeInView(cam, size, near, far, step);
         batch.begin(cam);
         batch.render(axis,env);
         batch.render(grid,env);
@@ -228,7 +228,7 @@ public class Grid {
 
         builder.setColor(Color.RED);
         builder.line(GRID_MIN , 0f , 0 , GRID_MAX , 0 , 0);
-//        builder.setColor(Color.GREEN);
+//        builder.setColor(Ansi.GREEN);
 //        builder.line(0 , GRID_MIN , 0 , 0 , GRID_MAX , 0);
         builder.setColor(Color.BLUE);
         builder.line(0 , 0f , GRID_MIN , 0 , 0 , GRID_MAX);

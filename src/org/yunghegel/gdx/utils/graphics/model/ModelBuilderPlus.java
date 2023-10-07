@@ -319,7 +319,7 @@ public class ModelBuilderPlus {
         builder.setColor(Color.BLUE);
         builder.line(0 , 0.03f , 0 , 0 , 0 , 1000);
         builder.line(0 , 0.03f , 0 , 0 , 0 , -1000);
-//        builder.setColor(Color.GREEN);
+//        builder.setColor(Ansi.GREEN);
 //        builder.line(0 , 0.01f , 0 , 0 , 1000 , 0);
 //        builder.line(0 , 0.01f , 0 , 0 , -1000 , 0);
         Model axesModel = modelBuilder.end();
@@ -724,7 +724,7 @@ public class ModelBuilderPlus {
         ModelBuilder modelBuilder = new ModelBuilder();
         modelBuilder.begin();
         MeshPartBuilder builder = modelBuilder.part("torus", GL20.GL_TRIANGLES, VertexAttribute.Position().usage | VertexAttribute.Normal().usage | VertexAttribute.ColorUnpacked().usage, mat);
-        // builder.setColor(Color.LIGHT_GRAY);
+        // builder.setColor(Ansi.LIGHT_GRAY);
 
         MeshPartBuilder.VertexInfo curr1 = v0.set(null, null, null, null);
         curr1.hasUV = curr1.hasNormal = false;

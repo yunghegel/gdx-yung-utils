@@ -5,13 +5,13 @@ import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.logging.*;
 
-public class OutputStreamInterceptor<T extends PrintStream> extends PrintStream {
+public class OutputStreamInterceptor extends PrintStream {
 
     public OnPrintListener onPrintListener;
     public GlobalLoggingHandler globalLoggingHandler;
     public GlobalLoggingFormatter globalLoggingFormatter;
 
-    private T printStream;
+
 
     public OutputStreamInterceptor(OutputStream out) {
         super(out);
@@ -37,7 +37,7 @@ public class OutputStreamInterceptor<T extends PrintStream> extends PrintStream 
 
     void intercept(){
         System.setOut(this);
-        System.out.println("intercepted"+System.out.toString());
+        System.out.println("intercepted"+ System.out);
         System.setErr(this);
     }
 
@@ -54,10 +54,10 @@ public class OutputStreamInterceptor<T extends PrintStream> extends PrintStream 
 
     @Override
     public void print(String s) {
-        super.print(s);
         if (onPrintListener != null) {
             onPrintListener.onPrint(s);
         }
+        super.print(s);
     }
 
     @Override
@@ -97,7 +97,7 @@ public class OutputStreamInterceptor<T extends PrintStream> extends PrintStream 
 
         public GlobalLoggingHandler(OnLogListener onLogListener) {
             this.onLogListener = onLogListener;
-        };
+        }
 
         public GlobalLoggingHandler() {
         }

@@ -526,7 +526,7 @@ public class GUIConsole extends AbstractConsole {
                         try {
                             l = labelClass.getConstructor(CharSequence.class, String.class, Color.class).newInstance("", fontName, LogLevel.DEFAULT.getColor());
                         } catch (Exception e2) {
-                            throw new RuntimeException("Label class does not support either (<String>, <Skin>, <String>, <Color>) or (<String>, <String>, <Color>) constructors.");
+                            throw new RuntimeException("Label class does not support either (<String>, <Skin>, <String>, <Ansi>) or (<String>, <String>, <Ansi>) constructors.");
                         }
                     }
                     l.setWrap(true);

@@ -75,7 +75,7 @@ public class MathUtils {
      */
 
     public static float abs(float a) {
-        return (float) Math.abs(a);
+        return Math.abs(a);
     }
 
     /**
@@ -326,7 +326,7 @@ public class MathUtils {
 
     public static float readFloatFromBytes(byte[] bytes, int offset) {
         int i = 0;
-        int value = bytes[0 + offset] & 0xFF;
+        int value = bytes[offset] & 0xFF;
         value |= bytes[1 + offset]<<(8) & 0xFFFF;
         value |= bytes[2 + offset]<<(16) & 0xFFFFFF;
         value |= bytes[3 + offset]<<(24) & 0xFFFFFFFF;
@@ -335,7 +335,7 @@ public class MathUtils {
 
     public static int writeFloatToBytes(float f, byte[] bytes, int offset) {
         int value = NumberUtils.floatToIntBits(f);
-        bytes[0 + offset] = (byte) (value & 0xFF);
+        bytes[offset] = (byte) (value & 0xFF);
         bytes[1 + offset] = (byte) (value>>8 & 0xFF);
         bytes[2 + offset] = (byte) (value>>16 & 0xFF);
         bytes[3 + offset] = (byte) (value>>24 & 0xFF);

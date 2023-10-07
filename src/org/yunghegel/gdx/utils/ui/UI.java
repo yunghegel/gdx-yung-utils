@@ -387,7 +387,7 @@ public class UI {
                             label.setText(label.getText() + String.valueOf(character));
                         }
                         return true;
-                    };
+                    }
                 };
                 typer.addListener(listener);
             }

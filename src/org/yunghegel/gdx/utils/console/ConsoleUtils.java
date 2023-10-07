@@ -92,8 +92,9 @@ public final class ConsoleUtils {
      */
     public static String getClassMethodLine(final Class aclass) {
         final StackTraceElement st = getCallingStackTraceElement(aclass);
-        final String amsg = "[" + st.getClassName() + "#" + st.getMethodName() + "(" + st.getLineNumber()
-                +")] <" + Thread.currentThread().getName() + ">: ";
+        String classname = st.getClassName();
+        String trimmedClassname = classname.substring(classname.lastIndexOf('.') + 1);
+        final String amsg = "[" + trimmedClassname + "." + st.getMethodName() + "()]";
         return amsg;
     }
 
@@ -108,25 +109,21 @@ public final class ConsoleUtils {
     public static StackTraceElement getCallingStackTraceElement(final Class aclass) {
         final Throwable           t         = new Throwable();
         final StackTraceElement[] ste       = t.getStackTrace();
-        int index = 1;
-        final int limit = ste.length;
+        int index = 2;
+        final int limit = ste.length-2;
         StackTraceElement   st        = ste[index];
         String              className = st.getClassName();
-        boolean aclassfound = false;
-        if(aclass == null)
-        {
-            aclassfound = true;
-        }
+        boolean aclassfound = aclass == null;
         StackTraceElement   resst = null;
         while(index < limit)
         {
-            if(shouldExamine(className, aclass) == true)
+            if(shouldExamine(className, aclass))
             {
                 if(resst == null)
                 {
                     resst = st;
                 }
-                if(aclassfound == true)
+                if(aclassfound)
                 {
                     final StackTraceElement ast = onClassfound(aclass, className, st);
                     if(ast != null)
@@ -137,7 +134,7 @@ public final class ConsoleUtils {
                 }
                 else
                 {
-                    if(aclass != null && aclass.getName().equals(className) == true)
+                    if(aclass != null && aclass.getName().equals(className))
                     {
                         aclassfound = true;
                     }
@@ -157,15 +154,15 @@ public final class ConsoleUtils {
 
     static private boolean shouldExamine(String className, Class aclass)
     {
-        final boolean res = ConsoleUtils.class.getName().equals(className) == false && (className.endsWith("LogFormatter"
-        ) == false || (aclass !=null && aclass.getName().endsWith("LogUtils")));
+        final boolean res = !ConsoleUtils.class.getName().equals(className) && (!className.endsWith("LogFormatter"
+        ) || (aclass !=null && aclass.getName().endsWith("LogUtils")));
         return res;
     }
 
     static private StackTraceElement onClassfound(Class aclass, String className, StackTraceElement st)
     {
         StackTraceElement   resst = null;
-        if(aclass != null && aclass.getName().equals(className) == false)
+        if(aclass != null && !aclass.getName().equals(className))
         {
             resst = st;
         }

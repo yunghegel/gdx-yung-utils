@@ -26,7 +26,7 @@ public class ArrayUtils {
     /**
      * Returns a new array containing the elements of the given array.
      */
-    public static <T> Array<T> array(T elements[])
+    public static <T> Array<T> array(T[] elements)
     {
         Array<T> array = new Array<T>();
         for(T element : elements) array.add(element);

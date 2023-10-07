@@ -37,7 +37,7 @@ public class MeshUtils {
         if ((usage & VertexAttributes.Usage.Normal) == VertexAttributes.Usage.Normal) attrs.add(new VertexAttribute(VertexAttributes.Usage.Normal, 3, ShaderProgram.NORMAL_ATTRIBUTE));
         if ((usage & VertexAttributes.Usage.TextureCoordinates) == VertexAttributes.Usage.TextureCoordinates)
             attrs.add(new VertexAttribute(VertexAttributes.Usage.TextureCoordinates, 2, ShaderProgram.TEXCOORD_ATTRIBUTE + "0"));
-        final VertexAttribute attributes[] = new VertexAttribute[attrs.size];
+        final VertexAttribute[] attributes = new VertexAttribute[attrs.size];
         for (int i = 0; i < attributes.length; i++)
             attributes[i] = attrs.get(i);
         return new VertexAttributes(attributes);
@@ -53,7 +53,7 @@ public class MeshUtils {
         int uvOffset = attribute.offset / 4;
 
         for(int i=0 ; i<size ; i++){
-            int vertex = (int)(indices[i] & 0xFFFF);
+            int vertex = indices[i] & 0xFFFF;
             int uvIndex = vertex * stride + uvOffset;
             vertices[uvIndex] += displacement.x;
             vertices[uvIndex+1] += displacement.y;
@@ -88,7 +88,7 @@ public class MeshUtils {
         int posOffset = attribute.offset / 4;
         m.set(node.globalTransform).mul(transform);
         for(int i=0 ; i<size ; i+=3){
-            int vertex = (int)(indices[i] & 0xFFFF);
+            int vertex = indices[i] & 0xFFFF;
             int vindex = vertex * stride + posOffset;
             float x = vertices[vindex];
             float y = vertices[vindex+1];
@@ -130,7 +130,7 @@ public class MeshUtils {
         int posOffset = attribute.offset / 4;
         float[][] result = new float[mesh.getNumIndices()/3][];
         for(int i=0 ; i<indices.length ; i+=3){
-            int vertex = (int)(indices[i] & 0xFFFF);
+            int vertex = indices[i] & 0xFFFF;
             int vindex = vertex * stride + posOffset;
             float x = vertices[vindex];
             float y = vertices[vindex+1];

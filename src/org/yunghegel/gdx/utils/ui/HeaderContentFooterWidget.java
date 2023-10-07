@@ -42,7 +42,7 @@ public class HeaderContentFooterWidget extends FlowGroup {
         footer.background(background);
 
         headerGroup = new HorizontalGroup();
-        headerGroup.space(5);;
+        headerGroup.space(5);
         footerGroup = new HorizontalGroup();
         footerGroup.space(5);
 

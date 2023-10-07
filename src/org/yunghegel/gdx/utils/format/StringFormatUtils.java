@@ -75,7 +75,7 @@ public class StringFormatUtils {
             value /= 1024;
             suffix = " TB";
         }
-        return String.valueOf(Math.round(value * 100.0) / 100.0) + suffix;
+        return Math.round(value * 100.0) / 100.0 + suffix;
     }
 
     public static String formatMatrix4(Matrix4 matrix4){

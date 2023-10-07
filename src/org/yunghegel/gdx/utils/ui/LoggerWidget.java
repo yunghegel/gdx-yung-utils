@@ -78,7 +78,7 @@ public class LoggerWidget extends VisTable {
         interceptor.setOnLogListener(log->{
             console.log(log);
         });
-    };
+    }
 
     void createInputListener() {
         stage.addListener(new InputListener() {

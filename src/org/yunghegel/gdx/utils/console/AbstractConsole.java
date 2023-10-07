@@ -121,9 +121,7 @@ public abstract class AbstractConsole extends VisTable implements Console, Dispo
         String[] sArgs = null;
         if (parts.length > 1) {
             sArgs = new String[parts.length - 1];
-            for (int i = 1; i < parts.length; i++) {
-                sArgs[i - 1] = parts[i];
-            }
+            System.arraycopy(parts, 1, sArgs, 0, parts.length - 1);
         }
 
         Class<? extends CommandExecutor> clazz = exec.getClass();

@@ -87,7 +87,7 @@ public class InstancedModel {
                 + "}";
 
         shader = new ShaderProgram(vertexShader, fragmentShader);
-        if (shader.isCompiled() == false) {
+        if (!shader.isCompiled()) {
             Gdx.app.log("ShaderTest", shader.getLog());
             Gdx.app.exit();
         }

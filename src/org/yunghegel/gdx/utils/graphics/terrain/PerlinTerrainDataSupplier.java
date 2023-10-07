@@ -90,7 +90,7 @@ public class PerlinTerrainDataSupplier {
     }
 
     private float getNoise(int x, int z) {
-        rand.setSeed(x * 49632 + z * 325176 + seed);
+        rand.setSeed(x * 49632L + z * 325176L + seed);
         return rand.nextFloat();
     }
 
