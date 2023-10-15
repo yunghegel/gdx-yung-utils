@@ -1,3 +1,6 @@
+plugins {
+    id 'groovy-gradle-plugin'
+}
 
 group 'org.yunghegel.gdx'
 version "$gdxYungUtilsVersion"
@@ -10,6 +13,8 @@ dependencies {
     implementation 'com.strongjoshua:libgdx-inGameConsole:1.0.0'
     // Define dependencies for gdx-yung-utils
     implementation "org.yunghegel.gdx:gdx-gizmos:$gdxGizmosVersion"
+
+    implementation 'com.github.czyzby:gdx-kiwi:1.9.1.9.6'
 
 }
 

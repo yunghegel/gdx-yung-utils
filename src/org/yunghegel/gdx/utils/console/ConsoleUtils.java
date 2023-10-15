@@ -109,7 +109,7 @@ public final class ConsoleUtils {
     public static StackTraceElement getCallingStackTraceElement(final Class aclass) {
         final Throwable           t         = new Throwable();
         final StackTraceElement[] ste       = t.getStackTrace();
-        int index = 2;
+        int index = 3;
         final int limit = ste.length-2;
         StackTraceElement   st        = ste[index];
         String              className = st.getClassName();

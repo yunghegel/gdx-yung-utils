@@ -10,13 +10,14 @@ import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.utils.Array;
+import com.badlogic.gdx.utils.Disposable;
 import org.yunghegel.gdx.utils.graphics.model.ModelBuilderPlus;
 import org.yunghegel.gdx.utils.shaders.DefaultShader;
 import org.yunghegel.gdx.utils.shaders.DefaultShaderProvider;
 import org.yunghegel.gdx.utils.shaders.GridShader;
 import org.yunghegel.gdx.utils.shaders.GridShaderProvider;
 
-public class Grid {
+public class Grid implements Disposable {
 
     private ModelBatch batch;
     private ModelInstance grid;
@@ -299,4 +300,11 @@ public class Grid {
         return new Vector2(u,v);
     }
 
+    @Override
+    public void dispose() {
+        batch.dispose();
+        grid.model.dispose();
+        axis.model.dispose();
+        origin.model.dispose();
+    }
 }
