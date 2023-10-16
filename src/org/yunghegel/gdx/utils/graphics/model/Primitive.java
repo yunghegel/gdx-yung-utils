@@ -6,5 +6,6 @@ public enum Primitive {
     Capsule,
     Cone,
     Cylinder,
-    Cube
+    Cube,
+    Plane
 }
